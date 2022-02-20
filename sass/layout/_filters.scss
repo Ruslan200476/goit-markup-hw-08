@@ -1,0 +1,11 @@
+.filters-list {
+  @extend %aline-list;
+  margin-right: auto;
+  margin-bottom: 50px;
+  margin-left: auto;
+
+  & .filters-list__item {
+    display: flex;
+    margin-left: 8px;
+  }
+}

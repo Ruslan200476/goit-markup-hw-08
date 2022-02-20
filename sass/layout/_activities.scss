@@ -1,0 +1,30 @@
+.activities {
+  @extend %aline-list;
+  .activities__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .activities__item {
+    width: 370px;
+    position: relative;
+  }
+  .activities__item + .activities__item {
+    margin-left: 30px;
+  }
+  .activities__label {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: calc(16 / 14);
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 27px;
+    padding-bottom: 27px;
+
+    color: var(--secondary-text-color);
+    background-color: rgba(47, 48, 58, 0.8);
+  }
+}
