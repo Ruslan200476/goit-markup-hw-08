@@ -3,7 +3,10 @@ body {
   color: var(--primary-text-color);
   font-family: "Roboto", sans-serif;
   letter-spacing: 0.03em;
-  padding-top: 80px;
+  padding-top: 60px;
+  @include desk {
+    padding-top: 80px;
+  }
 }
 .button {
   display: inline-block;
@@ -11,4 +14,9 @@ body {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }

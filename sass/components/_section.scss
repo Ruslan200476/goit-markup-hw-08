@@ -1,8 +1,20 @@
 .section {
-  display: flex;
-  align-items: center;
-  padding-top: 94px;
-  padding-bottom: 94px;
+  // width: 1200px;
+  // display: flex;
+  // align-items: center;
+  // padding-top: 94px;
+  // padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
   margin-left: auto;
   margin-right: auto;
+  width: 100%;
+  @include desk {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+.no-padding {
+  padding-top: 0;
+  padding-bottom: 0;
 }

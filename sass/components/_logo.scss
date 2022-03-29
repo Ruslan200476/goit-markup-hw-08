@@ -4,7 +4,7 @@
   .logo__item {
     display: block;
     font-family: "Raleway", sans-serif;
-    @include font(700, 26px, 31px, nule);
+    @include font(700, 26, 31, 0.03);
     color: var(--akcent-text-color);
     padding-top: 24px;
     padding-bottom: 25px;

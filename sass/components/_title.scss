@@ -1,10 +1,12 @@
 .section__title {
   text-align: center;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: calc(42 / 36);
-
+  @include font(700, 28, 33, 0.03);
   margin-top: 0;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   color: var(--title-text-color);
+
+  @include desk {
+    @include font(700, 36, 42, 0.03);
+    margin-bottom: 50px;
+  }
 }

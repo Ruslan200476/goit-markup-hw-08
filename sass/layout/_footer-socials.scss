@@ -5,7 +5,7 @@
   margin-left: 70px;
 
   .footer-socials__title {
-    @include font(700, 14px, 16px, nule);
+    @include font(700, 14, 16, 0.03);
     text-transform: uppercase;
     color: var(--secondary-text-color);
     margin-bottom: 20px;

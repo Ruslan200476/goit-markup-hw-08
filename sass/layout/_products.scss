@@ -1,33 +1,34 @@
-.products-list {
-  display: flex;
-  flex-wrap: wrap;
-
-  & .products-list__item {
-    width: 370px;
-    margin-right: 30px;
-    margin-bottom: 30px;
-    background: #ffffff;
-    border: 1px solid #eeeeee;
-    box-sizing: border-box;
-  }
-  & .products-list__item:nth-child(3n) {
-    margin-right: 0;
-  }
-  & .products-list__item:nth-last-child(-n + 3) {
-    margin-bottom: 0;
-  }
+.products__list {
+  // display: flex;
+  // flex-wrap: wrap;
+  align-items: center;
 }
+.products__item {
+  display: flex;
+  width: 100%;
+  // width: 370px;
+  // margin-right: 30px;
+  margin-bottom: 30px;
+  background: #ffffff;
+  border: 1px solid #eeeeee;
+  box-sizing: border-box;
+}
+// .products-list__item:nth-child(3n) {
+//   margin-right: 0;
+// }
+// .products-list__item:nth-last-child(-n + 3) {
+//   margin-bottom: 0;
+// }
 
-.products-list__wrap {
+.products__wrap {
   position: relative;
   overflow: hidden;
 }
-.products-list__article {
+.products__article {
   position: absolute;
   left: 0;
   bottom: 0;
-  font-size: 18px;
-  line-height: calc(28 / 18);
+  @include font(400, 18, 28, 0.03);
   padding: 63px 24px;
   color: var(--secondary-text-color);
   background-color: var(--background-color-wrap);
@@ -36,11 +37,12 @@
   transform: translateY(100%);
   transition: transform 250ms linear;
 }
-.products-list__link {
+
+.products__link {
   display: block;
   transition: box-shadow var(--transition);
 
-  &:hover .products-list__article {
+  &:hover .products__article {
     transform: translateY(0%);
   }
   &:hover,
@@ -49,17 +51,17 @@
   }
 }
 
-.products-list__title {
+.products__title {
   margin-bottom: 4px;
-  @include font(700, 18px, 36px, 0.06em);
+  @include font(700, 18, 36, 0.06);
   color: var(--title-text-color);
 }
-.products-list__text {
-  @include font(nule, 16px, 30px, nule);
-  font-size: 16px;
-  line-height: calc(30 / 16);
+
+.products__text {
+  @include font(400, 16, 30, 0.03);
   color: var(--primary-text-color);
 }
-.products-list__box {
+.products__box {
+  width: 100%;
   padding: 20px 24px;
 }

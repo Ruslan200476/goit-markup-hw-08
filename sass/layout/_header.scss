@@ -1,4 +1,5 @@
 .page-header {
+  display: flex;
   position: fixed;
   width: 100%;
   top: 0;
@@ -21,7 +22,8 @@
   margin-right: auto;
 
   .nav-list {
-    display: flex;
+    // display: flex;
+    display: none;
     margin-left: 94px;
   }
 
@@ -29,10 +31,11 @@
     margin-left: 50px;
   }
   .nav__link {
-    display: flex;
+    // display: flex;
+    display: none;
     padding-top: 32px;
     padding-bottom: 32px;
-    @include font(500, 14px, 16px, 0.02em);
+    @include font(500, 14, 16, 0.02);
     color: var(--title-text-color);
 
     transition: color var(--transition);
@@ -74,9 +77,10 @@
     margin-right: 10px;
   }
   .contacts__link {
-    display: flex;
+    // display: flex;
+    display: none;
     align-items: center;
-    @include font(500, 14px, 16px, 0.02em);
+    @include font(500, 14, 16, 0.02);
     padding-top: 32px;
     padding-bottom: 32px;
     text-decoration: none;
@@ -86,4 +90,83 @@
       color: var(--akcent-text-color);
     }
   }
+}
+.menu-open-btn {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  display: block;
+  margin-left: auto;
+}
+
+.mob-menu {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--background-color-body);
+  top: 0;
+  left: 0;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  .container {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+.menu-close-btn {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  display: block;
+  right: 15px;
+  top: -38px;
+  position: absolute;
+}
+.mob-menu-item,
+.mob-contacts-item {
+  &:not(:last-child) {
+    margin-bottom: 32px;
+  }
+}
+.mob-menu-link {
+  @include font(500, 40, 47, 0.02);
+  text-align: center;
+  color: var(--title-text-color);
+  text-decoration: none;
+}
+.mob-contacts-list {
+  margin-bottom: 64px;
+}
+.mob-contacts-link {
+  @include font(500, 24, 28, 0.02);
+  color: var(--primary-text-color);
+  text-decoration: none;
+}
+.mob-social-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.mob-social-item {
+  &:not(:last-child) {
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+    padding-right: 10px;
+    margin-right: 10px;
+  }
+}
+.mob-social-link {
+  @include font(500, 18, 22, 0.02);
+  color: var(--akcent-text-color);
+  text-decoration: none;
 }
